@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="FocusFlow - A productivity focus timer app to help you stay focused and get things done">
+    <title>FocusFlow - Stay Focused, Get Things Done</title>
+    
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="/icons/icon-512.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1 class="logo">FocusFlow</h1>
+            <p class="tagline">Stay Focused, Get Things Done</p>
+            <p class="subtitle">Master your time with the Pomodoro technique. Work smarter, not harder.</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why FocusFlow?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Smart Timer</h3>
+                    <p>Customizable focus and break intervals that adapt to your workflow</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Track Progress</h3>
+                    <p>Visualize your productivity with detailed statistics and insights</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Smart Notifications</h3>
+                    <p>Gentle reminders to keep you on track without breaking your flow</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Works Offline</h3>
+                    <p>Progressive web app that works seamlessly on any device, anywhere</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Timer Demo -->
+    <section class="timer-demo">
+        <div class="container">
+            <h2>Try It Now</h2>
+            <div class="timer-container">
+                <div class="timer-display">
+                    <span id="timer">25:00</span>
+                </div>
+                <div class="timer-controls">
+                    <button id="startBtn" class="timer-btn">Start</button>
+                    <button id="pauseBtn" class="timer-btn" disabled>Pause</button>
+                    <button id="resetBtn" class="timer-btn">Reset</button>
+                </div>
+                <div class="timer-mode">
+                    <span class="mode-label">Focus Mode</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>About FocusFlow</h2>
+            <p>FocusFlow is built on the proven Pomodoro Technique, helping thousands of people boost their productivity and maintain focus throughout the day. Whether you're studying, working, or pursuing creative projects, FocusFlow keeps you in the zone.</p>
+            <p>Our mission is simple: help you achieve more by working in focused intervals with strategic breaks. No distractions, no complexity—just pure productivity.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 FocusFlow. All rights reserved.</p>
+            <nav class="footer-links">
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="#contact">Contact</a>
+                <a href="#support">Support</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

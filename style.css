@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e;
+    color: #f0f0f0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 80px 20px 60px;
+}
+
+.logo {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 700;
+    color: #e94560;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #f0f0f0;
+}
+
+.subtitle {
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    color: #b0b0b0;
+    margin-bottom: 35px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background-color: #e94560;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cta-button:hover {
+    background-color: #ff5577;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(233, 69, 96, 0.3);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+/* Features Section */
+.features {
+    padding: 80px 20px;
+    background-color: #16213e;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 50px;
+    color: #f0f0f0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: #1a1a2e;
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #e94560;
+    box-shadow: 0 10px 30px rgba(233, 69, 96, 0.2);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: #e94560;
+}
+
+.feature-card p {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Timer Demo Section */
+.timer-demo {
+    padding: 80px 20px;
+    background-color: #1a1a2e;
+}
+
+.timer-demo h2 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 50px;
+    color: #f0f0f0;
+}
+
+.timer-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.timer-display {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #16213e 0%, #0f1626 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4),
+                inset 0 -5px 20px rgba(233, 69, 96, 0.1);
+}
+
+.timer-display::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid #e94560;
+    opacity: 0.2;
+}
+
+#timer {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #e94560;
+    letter-spacing: 2px;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.timer-btn {
+    background-color: #16213e;
+    color: #f0f0f0;
+    border: 2px solid #e94560;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    min-width: 100px;
+}
+
+.timer-btn:hover:not(:disabled) {
+    background-color: #e94560;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(233, 69, 96, 0.3);
+}
+
+.timer-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.timer-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.timer-mode {
+    margin-top: 20px;
+}
+
+.mode-label {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #16213e;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #e94560;
+    font-weight: 500;
+}
+
+/* About Section */
+.about {
+    padding: 80px 20px;
+    background-color: #16213e;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: center;
+    color: #b0b0b0;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Footer */
+.footer {
+    background-color: #0f1626;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer p {
+    color: #808080;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #e94560;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .timer-display {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .timer-display::before {
+        width: 260px;
+        height: 260px;
+    }
+    
+    #timer {
+        font-size: 2.8rem;
+    }
+    
+    .timer-btn {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+        min-width: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 15px 40px;
+    }
+    
+    .features,
+    .timer-demo,
+    .about {
+        padding: 60px 15px;
+    }
+    
+    .timer-display {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .timer-display::before {
+        width: 240px;
+        height: 240px;
+    }
+    
+    #timer {
+        font-size: 2.5rem;
+    }
+    
+    .timer-controls {
+        gap: 10px;
+    }
+    
+    .timer-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        min-width: 85px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+}
